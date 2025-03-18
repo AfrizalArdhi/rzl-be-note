@@ -1,0 +1,23 @@
+get http://localhost:5000/notes
+
+###
+POST http://localhost:5000/create-notes
+Content-Type: application/json
+
+{
+    "title": "Note Pertamaku",
+    "content": "Lorem ipsum lamor aminor adsaasadsasdads"
+}
+
+###
+PUT http://localhost:5000/update-notes/1
+Content-Type: application/json
+
+{
+    "title": "Note Diubah Pertamaku",
+    "content": "Aku cinta tcc"
+}
+
+###
+DELETE http://localhost:5000/delete-notes/1
+Content-Type: application/json
