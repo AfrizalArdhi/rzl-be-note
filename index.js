@@ -7,4 +7,9 @@ app.use(cors());
 app.use(express.json());
 app.use(router);
 
-app.listen(5000, ()=> console.log('Server Up and Running...'));
+// Tambahkan ini biar akses "/" gak error
+app.get('/', (req, res) => {
+  res.send('Backend is running...');
+});
+
+app.listen(5000, () => console.log('Server Up and Running...'));
